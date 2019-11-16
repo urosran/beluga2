@@ -171,10 +171,10 @@ export default class CustomCard extends Component {
         })
     }
     handleEmailChange(event) {
-        this.setState({name: event.target.value});
+        this.setState({email: event.target.value});
     }
     handleNameChange(event) {
-        this.setState({email: event.target.value});
+        this.setState({name: event.target.value});
     }
     render(){
         return(        

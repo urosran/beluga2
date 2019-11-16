@@ -50,9 +50,9 @@ app.post('/send', (req, res, next) => {
   const email = req.body.email
   const message = req.body.messageHtml
 
-  console.log(name)
-  console.log(email)
-  console.log(message)
+  console.log(name, "name")
+  console.log(email, "email")
+  console.log(message, "message")
 
   var mail = {
     from: name,
