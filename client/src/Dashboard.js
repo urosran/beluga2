@@ -67,8 +67,8 @@ export default class CustomCard extends Component {
       body: photoFormData
     });
     audioChunks = [];
-    console.log(response.text())
-    console.log(response)
+    console.log(response.text());
+    console.log(response);
     return response.text();
   };
 
@@ -192,13 +192,22 @@ export default class CustomCard extends Component {
             style={{ margin: 10 }}
           />
         </form>
-        <Button onClick={this.handleSubmit}>send test email</Button>
+        {/* <Button onClick={this.handleSubmit}>send test email</Button> */}
         <Grid item>
-            <Typography>You said:</Typography>
-            {console.log(this.state.transcripton)}
-            <Typography>{this.state.transcripton}</Typography>
+          <Typography>Transcription:</Typography>
+          {console.log(this.state.transcripton)}
+          <Typography
+            style={{
+              margin: 20,
+              paddingTop: 50,
+              border: 1,
+              borderColor: "black"
+            }}
+          >
+            {this.state.transcripton}
+          </Typography>
         </Grid>
-        <Grid item direction="column" justify="center" alignItems="center">
+        <Grid item>
           <Button color="primary" onClick={this.startRecording}>
             start
           </Button>
